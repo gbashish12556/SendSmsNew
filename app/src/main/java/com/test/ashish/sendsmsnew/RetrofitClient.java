@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    public static final String BASE_URL = "https://script.google.com/macros/s/AKfycbysPlhA8ta46MiDJZEqslIbUZJSWXssrQsXGloQ59cEDODZyhA/";
+    private static final String BASE_URL = "https://script.google.com/macros/s/AKfycbysPlhA8ta46MiDJZEqslIbUZJSWXssrQsXGloQ59cEDODZyhA/";
     private static RetrofitClient mRetrofitInstance;
     private Retrofit retrofit;
 

@@ -19,12 +19,12 @@ import java.util.Random;
 
 public class SendMessageActivity extends AppCompatActivity {
 
-    ViewModel viewModel;
+    private ViewModel viewModel;
 
-    String userName = "", userMobile = "", otp = "", message = "";
+    private String userName = "", userMobile = "", otp = "", message = "";
 
-    EditText messageEditText;
-    Button sendMessageButton;
+    private EditText messageEditText;
+    private Button sendMessageButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -77,7 +77,11 @@ public class SendMessageActivity extends AppCompatActivity {
         sendMessageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                viewModel.updateMessage(userName,userMobile,message);
+                if(message.equalsIgnoreCase("")) {
+                    Toast.makeText(SendMessageActivity.this,"Message Field Can Not Be Blank", Toast.LENGTH_LONG).show();
+                }else {
+                    viewModel.updateMessage(userName, userMobile, message);
+                }
             }
         });
     }

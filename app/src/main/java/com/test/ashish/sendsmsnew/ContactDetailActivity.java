@@ -9,9 +9,9 @@ import android.widget.TextView;
 
 public class ContactDetailActivity extends Activity {
 
-    TextView userNameTextView;
-    TextView userMobileTextView;
-    Button sendMessageButton;
+    private TextView userNameTextView;
+    private TextView userMobileTextView;
+    private Button sendMessageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

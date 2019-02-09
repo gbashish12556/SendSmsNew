@@ -18,14 +18,12 @@ public class ApiRepository {
     private MutableLiveData<Boolean> contactApiStatus;
     private MutableLiveData<Boolean> messageApiStatus;
     private MutableLiveData<Boolean> updateMessageApiStatus;
-    MutableLiveData<ArrayList<Contact>> allContacts  = new MutableLiveData<ArrayList<Contact>>();
-    MutableLiveData<ArrayList<Message>> allMesssages = new MutableLiveData<ArrayList<Message>>();;
+    private MutableLiveData<ArrayList<Contact>> allContacts  = new MutableLiveData<ArrayList<Contact>>();
+    private MutableLiveData<ArrayList<Message>> allMesssages = new MutableLiveData<ArrayList<Message>>();;
 
     public ApiRepository(){
 
     }
-
-
 
     public MutableLiveData<ArrayList<Contact>> getAllContatcs() {
         fetchContacts();

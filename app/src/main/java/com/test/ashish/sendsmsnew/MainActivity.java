@@ -9,14 +9,14 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    Fragment fragment;
+    private Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loadFragment(new MessageFragment());
+        loadFragment(new ContactFragment());
 
         BottomNavigationView navigation = findViewById(R.id.activity_sales_bottom_navigation_view);
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
                 Bundle bundle = new Bundle();
 
                 switch (item.getItemId()) {
-                    case R.id.nav_visits:
+                    case R.id.contacts:
                         fragment = new ContactFragment();
                         break;
 
-                    case R.id.nav_followup:
+                    case R.id.messages:
                         fragment = new MessageFragment();
                         break;
 

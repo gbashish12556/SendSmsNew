@@ -27,14 +27,13 @@ import java.util.List;
  */
 public class ContactFragment extends Fragment implements ContactsRecyclerViewAdapter.ClickListener{
 
-    ViewModel viewModel;
-    RecyclerView recyclerView;
-    ArrayList<Contact> allContacts;
+    private ViewModel viewModel;
+    private RecyclerView recyclerView;
+    private ArrayList<Contact> allContacts;
 
     public ContactFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

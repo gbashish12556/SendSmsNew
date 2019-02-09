@@ -27,9 +27,9 @@ import java.util.ArrayList;
 public class MessageFragment extends Fragment {
 
 
-    ViewModel viewModel;
-    RecyclerView recyclerView;
-    ArrayList<Message> allMessage;
+    private ViewModel viewModel;
+    private RecyclerView recyclerView;
+    private ArrayList<Message> allMessage;
 
     public MessageFragment() {
         // Required empty public constructor
