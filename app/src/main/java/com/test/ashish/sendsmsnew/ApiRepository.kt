@@ -38,7 +38,7 @@ class ApiRepository {
             if (contactApiStatus == null) {
                 contactApiStatus = MutableLiveData()
             }
-            return contactApiStatus
+            return contactApiStatus!!
         }
 
     val messageFetchStatus: MutableLiveData<Boolean>
@@ -46,7 +46,7 @@ class ApiRepository {
             if (messageApiStatus == null) {
                 messageApiStatus = MutableLiveData()
             }
-            return messageApiStatus
+            return messageApiStatus as MutableLiveData<Boolean>
         }
 
     val updateMessageFetchStatus: MutableLiveData<Boolean>
@@ -54,7 +54,7 @@ class ApiRepository {
             if (updateMessageApiStatus == null) {
                 updateMessageApiStatus = MutableLiveData()
             }
-            return updateMessageApiStatus
+            return updateMessageApiStatus as MutableLiveData<Boolean>
         }
 
     fun fetchContacts() {

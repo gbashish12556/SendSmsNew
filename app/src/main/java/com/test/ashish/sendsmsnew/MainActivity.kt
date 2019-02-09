@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
 
         val navigation = findViewById<BottomNavigationView>(R.id.activity_sales_bottom_navigation_view)
         navigation.setOnNavigationItemSelectedListener { item ->
-            val bundle = Bundle()
 
             when (item.itemId) {
                 R.id.contacts -> fragment = ContactFragment()

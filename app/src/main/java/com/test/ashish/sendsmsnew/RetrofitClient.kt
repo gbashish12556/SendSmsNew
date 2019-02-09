@@ -26,7 +26,7 @@ class RetrofitClient private constructor() {
                     mRetrofitInstance = RetrofitClient()
                 }
 
-                return mRetrofitInstance
+                return mRetrofitInstance as RetrofitClient
 
             }
     }

@@ -29,12 +29,12 @@ class MessageRecyclerViewAdapter(private val data: ArrayList<Message>) : Recycle
         return data.size
     }
 
-    internal inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        private val txtName: TextView
-        private val txtMobile: TextView
-        private val txtSmsTime: TextView
-        private val txtMessage: TextView
+        val txtName: TextView
+        val txtMobile: TextView
+        val txtSmsTime: TextView
+        val txtMessage: TextView
 
         init {
 

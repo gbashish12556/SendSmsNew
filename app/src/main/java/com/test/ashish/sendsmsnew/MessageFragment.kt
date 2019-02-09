@@ -47,7 +47,7 @@ class MessageFragment : Fragment() {
 
         allMessage = ArrayList()
 
-        val noteAdapter = MessageRecyclerViewAdapter(allMessage)
+        val noteAdapter = MessageRecyclerViewAdapter(allMessage!!)
 
         recyclerView!!.adapter = noteAdapter
 

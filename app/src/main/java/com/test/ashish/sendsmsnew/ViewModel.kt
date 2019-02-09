@@ -26,7 +26,7 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
             if (contactApiStatus == null) {
                 contactApiStatus = apiRepository.contactFetchStatus
             }
-            return contactApiStatus
+            return this!!.contactApiStatus!!
         }
 
     val messages: MutableLiveData<ArrayList<Message>>
@@ -37,7 +37,7 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
             if (messageApiStatus == null) {
                 messageApiStatus = apiRepository.messageFetchStatus
             }
-            return messageApiStatus
+            return this!!.messageApiStatus!!
         }
 
     val updateMessageFetchStatus: MutableLiveData<Boolean>
@@ -45,7 +45,7 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
             if (updateMessageApiStatus == null) {
                 updateMessageApiStatus = apiRepository.updateMessageFetchStatus
             }
-            return updateMessageApiStatus
+            return this!!.updateMessageApiStatus!!
         }
 
     init {

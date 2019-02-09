@@ -45,7 +45,7 @@ class ContactFragment : Fragment(), ContactsRecyclerViewAdapter.ClickListener {
 
         allContacts = ArrayList()
 
-        val noteAdapter = ContactsRecyclerViewAdapter(this, allContacts)
+        val noteAdapter = ContactsRecyclerViewAdapter(this, allContacts!!)
 
         recyclerView!!.adapter = noteAdapter
 
@@ -63,7 +63,7 @@ class ContactFragment : Fragment(), ContactsRecyclerViewAdapter.ClickListener {
         })
     }
 
-    override fun launchIntent(userName: String, userMobile: String) {
+    override fun launchIntent(userName: String, userMobile: String?) {
         val intent = Intent(activity, ContactDetailActivity::class.java)
         intent.putExtra("user_name", userName)
         intent.putExtra("user_mobile", userMobile)
